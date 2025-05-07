@@ -87,10 +87,10 @@
     display: block;
     padding: 10px 20px;
     text-align: center;
-    margin-top: 120px;
+    margin-top: 40px;
 }
 
-
+/* 
 .side-category-btn{
     border: none;
     background-color: #7750d400;
@@ -103,7 +103,7 @@
 }
 .side-category-btn:hover{
     background-color: #7750d4;
-}
+} */
 
 .content {
     padding: 20px;

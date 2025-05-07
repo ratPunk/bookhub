@@ -23,25 +23,13 @@
             <?php endif; ?>
         </div>
         <hr>
-
-        <h3>Категории</h3>
-        <hr>
-        <div class="side-category">
-            <button class="side-category-btn" data-category="Классическая литература">Классическая литература</button>
-            <button class="side-category-btn" data-category="Современная литература">Современная литература</button>
-            <button class="side-category-btn" data-category="Научная фантастика">Научная фантастика</button>
-            <button class="side-category-btn" data-category="Фэнтези">Фэнтези</button>
-            <button class="side-category-btn" data-category="Детективы">Детективы</button>
-        </div>
-        <hr>
             
         <h3>Дополнительно</h3>
         <hr>    
         <nav>
             <ul>
                 <li><a href="#">О нас</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Портфолио</a></li>
+                <li><a href="../../../forum2/author.html">Автор</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
         </nav>

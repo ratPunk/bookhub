@@ -5,14 +5,14 @@
 
         <div class="buttons">
             <nav>
-                <a href="index.php" class="active">Главная</a>
-                <a href="#">Категории</a>
-                <a href="#">Авторы</a>
+                <a href="../../../forum2/index.php">Главная</a>
+                <a href="#">О нас</a>
+                <a href="../../../forum2/author.html">Автор</a>
                 <a href="#">Обсуждения</a>
             </nav>
 
             <?php if (isset($_SESSION['user'])): ?>
-                <a href="account.php" class="button_system">
+                <a href="../../../forum2/account.php" class="button_system">
                     <span><?php echo $_SESSION['user']['login']; ?></span>
                 </a>
                 <a href="server/php/logout.php" class="button_system">

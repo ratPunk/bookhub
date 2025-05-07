@@ -11,7 +11,7 @@ body::-webkit-scrollbar {
 
 /*category*/
 .category{
-    max-width: 400px;
+
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -23,14 +23,18 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: space-around;
 
-    max-height: 250px;
+    max-height: 320px;
 }
 .category-btn{
-    background-color: #6B46C1;
-    color: white;
+    background: #f0f0f0;
+    color: #333;
     border: none;
     border-radius: 8px;
     padding: 10px 0;
+    font-size: 1rem;
+
+    text-decoration: none;
+    text-align: center;
 
     cursor: pointer;
 
@@ -40,24 +44,51 @@ body::-webkit-scrollbar {
     background-color: #7750d4;
 }
 
+.category-btn:hover, 
+        .category-btn.active {
+            background: #6B46C1;
+            color: white;
+        }
+        .no-posts {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #666;
+            display: none;
+        }
+        .card {
+            transition: all 0.3s ease;
+        }
+        .hidden {
+            display: none;
+        }
+
 @media (max-width: 768px){
-    .category{
+    /* .category{
         display: none;
+    } */
+    .category{
+        width: auto;
+        row-gap: 10px;
+        margin-bottom: 30px;
     }
 }
 @media (max-width: 900px){
     .category-btn{
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 }
 
 
 /*main*/
 main{
-    margin: 40px 15%;
+    margin: 40px 10%;
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 20px;
+    
+    min-height: 500px;
+
 }
 @media (min-width: 769px){
     main{

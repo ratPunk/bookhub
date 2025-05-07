@@ -47,7 +47,7 @@ if (strlen($password) < 8 || strlen($password) > 20) {
 }
 
 if (!preg_match('/[A-Z]/', $password) || !preg_match('/[a-z]/', $password) || !preg_match('/[0-9]/', $password) || !preg_match('/[\W_]/', $password)) {
-    header('Location: ../../auth/register_form.html?error=' . urlencode('Пароль должен содержать хотя бы одну заглавную букву, <br> одну строчную букву, одну цифру и один специальный символ'));
+    header('Location: ../../auth/register_form.html?error=' . urlencode('Пароль должен содержать хотя бы одну заглавную букву, одну строчную букву, одну цифру и один специальный символ'));
     exit();
 }
 
