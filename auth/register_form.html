@@ -1,0 +1,61 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Hub - Регистрация</title>
+    <link rel="stylesheet" href="../style/css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="header">
+                <h2>Регистрация</h2>
+                <div class="logo">BookHub</div>
+            </div>
+            <div class="error" id="error"></div>
+            <form id="registerForm" action="../server/auth/register.php" method="POST">
+                <div class="input-group">
+                    <input type="text" name="login" id="username" placeholder=" " required>
+                    <label for="username">Имя пользователя</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" id="email" placeholder=" ">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" id="reg_password" placeholder=" " required>
+                    <label for="reg_password">Пароль</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder=" " required>
+                    <label for="confirm_password">Повторите пароль</label>
+                </div>
+                <input type="submit" value="Зарегистрироваться" class="submit-btn">
+            </form>
+            <div class="footer">
+                <span>Уже есть аккаунт? <a href="login.html">Войти</a></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Функция для получения GET-параметра
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Получаем значение параметра 'error'
+        const error = getQueryParam('error');
+        
+        // Если параметр существует, помещаем его в div
+        if (error) {
+            document.getElementById('error').textContent = error;
+        }
+    </script>
+</body>
+</html>
